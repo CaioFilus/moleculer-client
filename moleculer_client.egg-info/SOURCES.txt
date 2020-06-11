@@ -1,0 +1,9 @@
+README.rst
+setup.py
+moleculer_client/__init__.py
+moleculer_client/moleculer_client.py
+moleculer_client.egg-info/PKG-INFO
+moleculer_client.egg-info/SOURCES.txt
+moleculer_client.egg-info/dependency_links.txt
+moleculer_client.egg-info/requires.txt
+moleculer_client.egg-info/top_level.txt

@@ -1,0 +1,1 @@
+Simple Client in python to communicate with MoleculerJs Microservices using NATS
