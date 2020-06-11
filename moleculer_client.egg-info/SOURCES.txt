@@ -1,4 +1,4 @@
-README.rst
+README.md
 setup.py
 moleculer_client/__init__.py
 moleculer_client/moleculer_client.py

@@ -8,6 +8,7 @@ from typing import Dict, List
 from pynats import NATSClient, NATSMessage
 
 PROTOCOL_VERSION = "4"
+LOCAL_NATS = "nats://127.0.0.1:4222"
 
 __all__ = ['MoleculerClient', 'MoleculerCommands']
 
@@ -26,14 +27,14 @@ class MoleculerCommands(enum.Enum):
 
 
 class MoleculerClient(object):
-    def __init__(self, node_id: str, moleculer_nodeID: str, app=None):
+    def __init__(self, node_id: str, moleculer_nodeID: str, url=LOCAL_NATS):
         self.nc: NATSClient
         self.node = moleculer_nodeID
         self.sender = node_id
         self.reply_messages: Dict[str, NATSMessage] = {}
         self.init_app()
 
-    def init_app(self, url: str = "nats://127.0.0.1:4222"):
+    def init_app(self, url: str = LOCAL_NATS):
         self.nc = NATSClient(url=url, socket_timeout=5)
         self.nc.connect()
 
